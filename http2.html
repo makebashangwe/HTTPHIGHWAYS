@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <title>HTTP2</title>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><h3>Home</h3></a></li>
+        <li><a href="key-concepts.html"><h3>Key Concepts</h3></a></li>
+        <li><a href="early-http.html"><h3>Early HTTP</h3></a></li>
+        <li><a href="http2.html"><h3>HTTP/2</h3></a></li>
+        <li><a href="http3.html"><h3>HTTP/3</h3></a></li>
+        <li><a href="apis-cloud.html"><h3>APIs & Cloud</h3></a></li>
+        <li><a href="security-https.html"><h3>Security</h3></a></li>
+        <li><a href="about.html"><h3>About</h3></a></li>
+      </ul>
+      <h1 class="header-logo">HTTP</h1>
+
+    </nav>
+    <h1 class="header-title">HTTP2</h1>
+  </header>
+
+  <main class="container">
+    <section>
+        <div class="gif-banner"></div>  
+       <section aria-labelledby="intro">
+    <h2 id="intro">Intro</h2>
+    <p>
+      HTTP/2 was introduced to improve the performance of web communication
+      while keeping compatibility with existing web applications.
+      It addressed major inefficiencies in HTTP/1.1 by optimizing how
+      data is transferred between client and server.
+    </p>
+  </section>
+
+  <section aria-labelledby="multiplexing">
+    <h2 id="multiplexing">Multiplexing</h2>
+    <p>
+      HTTP/2 allows <strong>multiple requests and responses</strong> to be sent
+      simultaneously over a single persistent connection. Unlike HTTP/1.1,
+      where each request often needed its own connection or had to wait in line,
+      multiplexing removes these bottlenecks.
+    </p>
+    <ul>
+      <li>One TCP connection handles many requests at once.</li>
+      <li>No blocking when multiple assets are needed.</li>
+      <li>Improved page load times and reduced overhead.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="stream-id">
+    <h2 id="stream-id">Stream IDs and Parallel Processing</h2>
+    <p>
+      Each packet of data in HTTP/2 is tagged with a <strong>stream ID</strong>.
+      This lets the browser and server know which request or response the packet belongs to,
+      enabling true <em>parallel processing</em>.
+    </p>
+    <p>
+      Result: images, scripts, and stylesheets can all download in parallel without waiting on one another.
+    </p>
+  </section>
+
+  <section aria-labelledby="header-compression">
+    <h2 id="header-compression">Header Compression (HPACK)</h2>
+    <p>
+      HTTP headers (like cookies, user agents, and content types) can be large and repetitive.
+      HTTP/2 introduced <strong>HPACK compression</strong> to reduce header size.
+    </p>
+    <ul>
+      <li>Minimizes redundant data transmission.</li>
+      <li>Improves efficiency on header-heavy requests.</li>
+      <li>Especially important for mobile and low-bandwidth connections.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="binary">
+    <h2 id="binary">Binary Protocol</h2>
+    <p>
+      HTTP/2 switched from a <strong>text-based protocol</strong> to a
+      <strong>binary protocol</strong>. This makes parsing faster and less error-prone
+      for machines, even though humans can no longer read the raw requests easily.
+    </p>
+    <ul>
+      <li>More efficient parsing by clients and servers.</li>
+      <li>Reduces ambiguity of text formatting.</li>
+      <li>Foundation for advanced features like multiplexing and prioritization.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="server-push">
+    <h2 id="server-push">Server Push</h2>
+    <p>
+      With <strong>server push</strong>, the server can send resources to the client
+      before the client even asks for them. For example, if a client requests an HTML page,
+      the server can proactively push CSS and JavaScript files it knows will be needed.
+    </p>
+    <ul>
+      <li>Reduces round trips.</li>
+      <li>Speeds up page rendering.</li>
+      <li>Works best for predictable asset needs.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="prioritization">
+    <h2 id="prioritization">Stream Prioritization and Flow Control</h2>
+    <p>
+      HTTP/2 enables clients to <strong>prioritize streams</strong>, letting critical resources
+      like CSS or scripts load before less urgent assets like images.
+    </p>
+    <p>
+      <strong>Flow control</strong> ensures that a sender does not overwhelm a receiver,
+      balancing throughput and responsiveness.
+    </p>
+  </section>
+
+  <section aria-labelledby="https">
+    <h2 id="https">HTTPS Requirement</h2>
+    <p>
+      While HTTP/2 does not strictly require encryption in the specification,
+      <strong>most browsers enforce HTTPS</strong> for HTTP/2 features.
+      As a result, enabling HTTP/2 in practice usually means adopting TLS.
+    </p>
+  </section>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <ul>
+      <li>Multiplexing avoids blocking by sharing one connection for many streams.</li>
+      <li>Stream IDs enable parallel processing of responses.</li>
+      <li>HPACK reduces header overhead.</li>
+      <li>Binary framing improves efficiency and parsing.</li>
+      <li>Server push allows proactive resource delivery.</li>
+      <li>Stream prioritization and flow control optimize critical assets.</li>
+      <li>HTTPS is required for most real-world deployments.</li>
+    </ul>
+  </section>
+        <div class="gif-crop">
+            <img src="assets/images/data center network GIF.gif" alt="Cute Star Animation">
+        </div>  
+
+  </main>
+
+    <footer><a href="https://ksuweb.github.io/IT3203/">This is a class project for IT 3203.</a></footer>
+    <footer class="footer-logo"><a href = "https://www.linkedin.com/in/makebashangwe/">@makebashangwe</a></footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css">
+    <title>API & Cloud</title>
+
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><h3>Home</h3></a></li>
+            <li><a href="key-concepts.html"><h3>Key Concepts</h3></a></li>
+            <li><a href="early-http.html"><h3>Early HTTP</h3></a></li>
+            <li><a href="http2.html"><h3>HTTP2</h3></a></li>
+            <li><a href="http3.html"><h3>HTTP3</h3></a></li>
+            <li><a href="apis-cloud.html"><h3>Api & Cloud</h3></a></li>
+            <li><a href="security-https.html"><h3>Security</h3></a></li>
+            <li><a href="about.html"><h3>About</h3></a></li>
+
+        </ul>
+              <h1 class="header-logo">HTTP</h1>
+
+    </nav>
+    <h1 class="header-title">APIs & Cloud</h1>
+</header>
+
+<body>
+    <main class="container">
+  <section aria-labelledby="apis">
+    <h2 id="apis">APIs</h2>
+    <p>
+      Application Programming Interfaces (APIs) rely heavily on HTTP to define how
+      clients and servers communicate. They form the foundation of most modern
+      applications, allowing services to exchange data in predictable, structured ways.
+    </p>
+
+    <section aria-labelledby="http-methods">
+      <h3 id="http-methods">HTTP Methods</h3>
+      <p>
+        APIs use standard HTTP methods to structure interactions:
+      </p>
+      <ul>
+        <li><strong>GET</strong>: Retrieve data from the server.</li>
+        <li><strong>POST</strong>: Submit new data to the server.</li>
+        <li><strong>PUT/PATCH</strong>: Update existing resources.</li>
+        <li><strong>DELETE</strong>: Remove a resource.</li>
+      </ul>
+      <p>
+        This consistent approach ensures developers know what to expect regardless of
+        the underlying service.
+      </p>
+    </section>
+
+    <section aria-labelledby="status-codes">
+      <h3 id="status-codes">Status Codes and Headers</h3>
+      <p>
+        HTTP status codes provide <strong>consistent feedback</strong> for API calls:
+      </p>
+      <ul>
+        <li><strong>200 OK</strong>: Successful request.</li>
+        <li><strong>201 Created</strong>: New resource created.</li>
+        <li><strong>400 Bad Request</strong>: Invalid input.</li>
+        <li><strong>401 Unauthorized</strong>: Missing or invalid credentials.</li>
+        <li><strong>500 Internal Server Error</strong>: Something went wrong server-side.</li>
+      </ul>
+      <p>
+        Headers carry critical metadata such as:
+      </p>
+      <ul>
+        <li>Authentication tokens (e.g., <code>Authorization: Bearer token</code>)</li>
+        <li>Caching rules (<code>Cache-Control</code>, <code>ETag</code>)</li>
+        <li>Content type (<code>application/json</code>, <code>application/xml</code>)</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="statelessness">
+      <h3 id="statelessness">Stateless Nature</h3>
+      <p>
+        HTTP is <strong>stateless</strong>: each request is independent, and the server
+        does not need to remember previous interactions. This ensures:
+      </p>
+      <ul>
+        <li>Scalability &mdash; servers can handle millions of requests in parallel.</li>
+        <li>Load balancing &mdash; requests can be routed to any server in a cluster.</li>
+        <li>Resilience &mdash; failures in one request do not affect others.</li>
+      </ul>
+    </section>
+  </section>
+
+  <section aria-labelledby="cloud">
+    <h2 id="cloud">Cloud</h2>
+    <p>
+      In cloud computing, HTTP is the <strong>backbone of service delivery</strong>.
+      Everything from API gateways to serverless platforms uses HTTP to move data and
+      commands between clients and infrastructure.
+    </p>
+
+    <section aria-labelledby="providers">
+      <h3 id="providers">Providers and APIs</h3>
+      <p>
+        Major providers like <strong>AWS</strong>, <strong>Azure</strong>, and
+        <strong>Google Cloud</strong> expose management and application services through
+        APIs delivered over HTTP. For example:
+      </p>
+      <ul>
+        <li>AWS S3 (storage) exposes HTTP endpoints for uploading and retrieving objects.</li>
+        <li>Azure Resource Manager (ARM) provides REST APIs for deploying infrastructure.</li>
+        <li>Google Cloud Compute Engine exposes APIs to start, stop, and manage VMs.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="microservices">
+      <h3 id="microservices">Microservices and Communication</h3>
+      <p>
+        Modern applications are built on <strong>microservices</strong>: small,
+        independent services that work together. They rely on efficient communication
+        protocols like HTTP/2 or <strong>gRPC</strong> to provide:
+      </p>
+      <ul>
+        <li>Fast, low-latency data exchange between services.</li>
+        <li>Streamed communication for real-time processing.</li>
+        <li>Interoperability across distributed systems.</li>
+      </ul>
+      <p>
+        By using these protocols, cloud-native apps can scale quickly while maintaining
+        responsiveness under heavy load.
+      </p>
+    </section>
+  </section>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <ul>
+      <li>APIs rely on HTTP methods, status codes, and headers to structure communication.</li>
+      <li>HTTP’s stateless design ensures scalability and reliability.</li>
+      <li>Cloud computing depends on HTTP for service delivery and API access.</li>
+      <li>Microservices leverage HTTP/2 or gRPC for efficient, low-latency communication.</li>
+    </ul>
+  </section>
+    </main>
+</body>
+<footer>This is a class project for IT 3203. Course site: https://ksuweb.github.io/IT3203/</footer>
+<footer class="footer-logo"><a href = "https://www.linkedin.com/in/makebashangwe/">@makebashangwe</a></footer>
+</html>

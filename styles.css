@@ -1,0 +1,279 @@
+/* --- FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: "Billo";
+  src: url('assets/images/fonts/BILLO___.TTF') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lostar";
+  src: url('assets/images/fonts/Lostar.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* BASE STYLES */
+:root {
+  --page-max: 760px; /*page width */
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin-left: 50px;
+  margin: 0;
+  line-height: 1.6;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Page wrapper */
+.container {
+  max-width: var(--page-max);
+  margin: 50px auto;
+  padding: 0 16px;
+}
+
+/* --- HEADINGS & TEXT --- */
+h1, h2 {
+  margin: 24px 0 12px;
+}
+h1 {
+  font-weight: 700; /*bold*/
+}
+p {
+  text-align: left;
+  color: black;
+}
+.container {
+  max-width: 700px;      /* width of the text block */
+  margin: 0 auto;        /* centers the container horizontally */
+  padding: 0 20px;       /* breathing room on the sides */
+  text-align: left;     /* aligns text inside this block to the right */
+}
+.container-gray{
+  max-width: 700px;      /* width of the text block */
+  margin: 0 auto;        /* centers the container horizontally */
+  padding: 0 20px;       /* breathing room on the sides */
+  text-align: left;
+  background-color: #f3d2d2;
+  color:#111;
+
+}
+
+/* --- NAVIGATION --- */
+header nav {
+  background: #f3d2d2;
+  display: flex;                /* puts children (ul + h1) on same line */
+  justify-content: space-between; /* spreads nav links left, logo right */
+  align-items: center;          /* vertically centers them */
+  padding: 0 20px;   
+  font-size: .6em;           /* optional breathing room */
+}
+
+header nav ul {
+  list-style: none;
+  margin:0 auto;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  font-family: 'Lato';
+  max-width: 700px;      /* width of the text block */
+  padding-left: 120px; /* shifts everything right */
+  padding-right: 20px; /* keep right spacing normal */
+}
+
+header nav a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 5px 5px;
+  text-decoration: none;
+}
+header nav a:hover {
+  background-color: rgb(247, 142, 142);
+}
+
+/* --- HEADER TITLE --- */
+.header-title {
+  font-family: 'Lostar', sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 24px 0;
+  font-size: 5rem;
+}
+.header-logo {
+  font-family: 'Lostar', sans-serif;
+  color: white;        /* match the nav text */
+  font-size: 2.5rem;   /* tweak size to fit better */
+  margin: 0;           /* remove default h1 spacing */
+}
+
+.header-subtitle{
+    font-family: 'Lato', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:8px;
+    margin-right:20px;
+    margin-left: 20px;
+}
+/* --- FIGURES & MEDIA --- */
+figure {
+  margin: 28px auto;
+}
+
+figure img, 
+figure video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;   /* centers horizontally */
+  margin-right: auto;  /* centers horizontally */
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+.center-text{
+    max-width: 700px;      /* width of the text block */
+    margin: 0 auto;        /* centers the container horizontally */
+    padding: 0 20px;       /* breathing room on the sides */
+    text-align: center;     /* aligns text inside this block to the right */
+}
+
+/*  LISTS  */
+.no-bullets {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+/* --- BLOCKQUOTE --- */
+blockquote {
+  background: #f6f7f8;
+  color: #111;
+  border-left: 4px solid #d0d3d6;
+  padding: 16px 20px;
+  margin: 24px 0;
+  font-style: italic;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  font-size: .9rem;
+  padding: 20px 0;
+}
+.footer-logo a {
+  font-family: 'Billo', sans-serif;
+  font-size: 2.2rem;
+  color: rgb(249, 157, 215);
+  text-decoration: none;
+}
+footer a {
+  text-decoration: none;
+  color: pink;
+}
+/* JS */
+/* Baseline: keep layout stable before JS wraps letters */
+.stagger-grow {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Each letter will get this class */
+.letter {
+  display: inline-block;           /* needed for transform */
+  transform-origin: center bottom; /* pops upward nicely */
+  opacity: 0;                      /* fade-in with the pop */
+}
+
+@keyframes popIn {
+  0%   { transform: scale(0.6) translateY(6px); opacity: 0; color: #000; }
+  60%  { transform: scale(1.15) translateY(0);  opacity: 1; color: #000; }
+  80%  { transform: scale(0.95); color: #000; }
+  100% { transform: scale(1); opacity: 1; color: #000; }
+}
+
+.animate .letter {
+  animation: popIn 420ms cubic-bezier(.2,.7,.2,1) forwards;
+  color: #000; /* ✅ ensure final state stays black */
+}
+/* inherit color from the surrounding paragraph */
+.stagger-grow,
+.stagger-grow .letter,
+.animate .letter {
+  color: black;
+}
+
+/* Accessibility: honor reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate .letter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --- TABLE STYLING --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+thead {
+  background-color: #f4f4f4;
+}
+
+thead th {
+  padding: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Alternate row shading */
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #f1f9ff;
+  transition: background-color 0.2s ease;
+}
+
+/* Optional: Make the first column bold (version numbers stand out) */
+tbody td:first-child {
+  font-weight: 600;
+}
+.center-img {
+  display: block;
+  margin: 0 auto;
+}
+.gif-crop {
+  width: 100%;
+  height: 250px;     /* crop height */
+  overflow: hidden;  /* hides excess */
+  position: relative;
+}
+
+.gif-crop img {
+  width: 120%;
+  height: auto;
+  position: absolute;     /* lets you move it */
+  top: -120px;             /* shift upward */
+  left: 0;                /* keep aligned horizontally */
+}
+
+.gif-banner {
+  width: 100%;
+  height: 300px; /* crop height */
+  background: url("assets/images/Streaming\ The\ Internet\ GIF\ by\ Matthew\ Butler.gif") center/cover no-repeat;
+}

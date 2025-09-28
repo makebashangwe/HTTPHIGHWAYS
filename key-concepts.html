@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <title>HOME</title>
+
+</head>
+
+
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><h3>Home</h3></a></li>
+            <li><a href="key-concepts.html"><h3>Key Concepts</h3></a></li>
+            <li><a href="early-http.html"><h3>Early HTTP</h3></a></li>
+            <li><a href="http2.html"><h3>HTTP2</h3></a></li>
+            <li><a href="http3.html"><h3>HTTP3</h3></a></li>
+            <li><a href="apis-cloud.html"><h3>Api & Cloud</h3></a></li>
+            <li><a href="security-https.html"><h3>Security</h3></a></li>
+            <li><a href="about.html"><h3>About</h3></a></li>
+
+        </ul>
+        <h1 class="header-logo">HTTP</h1>
+
+    </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="header-title">Key Concepts</h1>
+        <h2>Client–Server Model</h2>
+        <p>A communication setup where the client (like a web browser) sends a request, and the server responds with the data or resource.</p>
+        <h2>Request</h2>
+        <p>The message a client sends to ask for something from the server, such as a web page or image.</p>
+        <h2>Response</h2>
+        <p>The message the server sends back to the client, containing the requested resource or an explanation of what happened.</p>
+        <h2>Error</h2>
+        <p>A type of response that shows something went wrong, usually given with a status code (like 404 for “Not Found”).</p>
+        <h2>Header</h2>
+        <p>Extra information included in requests and responses (like content type, caching rules, or authentication).</p>
+        <h2>Status Code</h2>
+        <p>A three-digit number in the response that explains the outcome (e.g., 200 = OK, 404 = Not Found, 500 = Server Error).</p>
+        <h2>Methods</h2>
+        <p>The verbs that tell the server what to do:</p>
+        <ul class="no-bullets">
+            <li><b>GET</b> – fetch a resource</li>
+            <li><b>POST</b> – send data</li>
+            <li><b>PUT</b> – replace a resource</li>
+            <li><b>DELETE</b> – remove a resource</li>
+            <li><b>PATCH</b> – update part of a resource</li>
+            <li><b>HEAD</b> – request only the headers (no body)</li>
+        </ul>
+        <h2>Persistent Connection</h2>
+        <p>A connection that stays open for multiple requests instead of closing after just one.</p>
+        <h2>Chunked Transfer Encoding</h2>
+        <p>Breaking a large response into smaller pieces (“chunks”) so the client can start processing before the full file arrives.</p>                <h2>Caching</h2>
+        <p>Storing copies of responses so they can be reused later without re-downloading from the server.</p>
+        <h2>Host Header</h2>
+        <p>A header that tells the server which website or domain the client is trying to reach (important when many sites share one server).</p>
+        <h2>Multiplexing</h2>
+        <p>Sending multiple requests and responses over the same connection at the same time without waiting.</p>
+        <h2>HPACK Header Compression</h2>
+        <p>A method in HTTP/2 that shrinks headers to save bandwidth and speed up communication.</p>
+        <h2>Binary Protocol</h2>
+        <p>Instead of text commands, messages are sent in a compact binary format (faster and less error-prone).</p>
+        <h2>Server Push</h2>
+        <p>When the server sends extra resources to the client before it even asks for them.</p>
+        <h2>Stream Prioritization</h2>
+        <p>The ability to mark which streams (requests/responses) should be handled first.</p>
+        <h2>Flow Control</h2>
+        <p>Rules that prevent one stream from overwhelming the connection by sending too much data at once.</p>
+        <h2>QUIC</h2>
+        <p>A transport protocol built on UDP that removes many of TCP’s delays, used by HTTP/3.</p>
+        <h2>TLS 1.3</h2>
+        <p>The latest version of Transport Layer Security, encrypting data to keep communication private and secure.</p>
+        <h2>Stateless</h2>
+        <p>Every request is independent and doesn’t “remember” the one before it. If state is needed, it’s carried through cookies, tokens, or headers.</p>
+        <hr>
+    </main>
+    
+    <footer><a href="https://ksuweb.github.io/IT3203/">This is a class project for IT 3203.</a></footer>
+    <footer class="footer-logo"><a href = "https://www.linkedin.com/in/makebashangwe/">@makebashangwe</a></footer>
+    
+</body>
+</html>

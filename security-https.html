@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "styles.css">
+    <title>SECURITY with HTTPS</title>
+
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><h3>Home</h3></a></li>
+            <li><a href="key-concepts.html"><h3>Key Concepts</h3></a></li>
+            <li><a href="early-http.html"><h3>Early HTTP</h3></a></li>
+            <li><a href="http2.html"><h3>HTTP2</h3></a></li>
+            <li><a href="http3.html"><h3>HTTP3</h3></a></li>
+            <li><a href="apis-cloud.html"><h3>Api & Cloud</h3></a></li>
+            <li><a href="security-https.html"><h3>Security</h3></a></li>
+            <li><a href="about.html"><h3>About</h3></a></li>
+
+        </ul>
+                    <h1 class="header-logo">HTTP</h1>
+
+    </nav>
+
+    <h1 class="header-title">Security</h1>
+</header>
+
+<body>
+   <main class="container">
+    <section aria-labelledby="intro">
+    <h2 id="intro">Introduction</h2>
+    <p>
+      Security is a core requirement of modern web communication.
+      Without protection, sensitive data such as passwords, financial details,
+      or personal information can be intercepted and misused.
+    </p>
+  </section>
+
+  <section aria-labelledby="plain-http">
+    <h2 id="plain-http">Plain HTTP Vulnerabilities</h2>
+    <p>
+      <strong>Plain HTTP transmits data in clear text</strong>. This means that any
+      attacker monitoring the network can read requests and responses directly.
+      Vulnerabilities include:
+    </p>
+    <ul>
+      <li>Exposed usernames, passwords, and form submissions.</li>
+      <li>Session hijacking through intercepted cookies.</li>
+      <li>Possibility of altering requests in transit.</li>
+    </ul>
+    <p>
+      In unsecured Wi-Fi environments (cafés, airports), these risks increase dramatically.
+    </p>
+  </section>
+
+  <section aria-labelledby="https">
+    <h2 id="https">HTTPS and TLS Encryption</h2>
+    <p>
+      <strong>HTTPS</strong>, built on <strong>TLS encryption</strong>,
+      secures communication by:
+    </p>
+    <ul>
+      <li><strong>Encrypting data</strong>: prevents outsiders from reading sensitive information.</li>
+      <li><strong>Authenticating servers</strong>: ensures clients connect to the real site, not an imposter.</li>
+      <li><strong>Maintaining integrity</strong>: protects data from being altered in transit.</li>
+    </ul>
+    <p>
+      This encryption and authentication make HTTPS the standard for secure web browsing.
+    </p>
+  </section>
+
+  <section aria-labelledby="tls-handshake">
+    <h2 id="tls-handshake">TLS Handshake</h2>
+    <p>
+      Security begins with the <strong>TLS handshake</strong>, where the client and server:
+    </p>
+    <ol>
+      <li>Agree on encryption algorithms and keys.</li>
+      <li>Exchange digital certificates to verify authenticity.</li>
+      <li>Establish a <strong>secure session</strong> that encrypts all subsequent traffic.</li>
+    </ol>
+    <p>
+      Once this handshake is complete, all communication between client and server is encrypted and protected.
+    </p>
+  </section>
+
+  <section aria-labelledby="importance">
+    <h2 id="importance">Why It Matters</h2>
+    <p>
+      Secure communication is <strong>critical</strong> for:
+    </p>
+    <ul>
+      <li>Protecting <strong>privacy</strong> in personal browsing and messaging.</li>
+      <li>Enabling <strong>online banking</strong> and <strong>e-commerce</strong> safely.</li>
+      <li>Building <strong>user trust</strong> in websites and applications.</li>
+      <li>Complying with regulations like GDPR, HIPAA, and PCI DSS.</li>
+    </ul>
+    <p>
+      Without HTTPS, users are exposed to risks such as identity theft, fraud, and unauthorized surveillance.
+    </p>
+  </section>
+
+  <section aria-labelledby="summary">
+    <h2 id="summary">Summary</h2>
+    <ul>
+      <li>Plain HTTP is insecure because data travels in clear text.</li>
+      <li>HTTPS with TLS encrypts, authenticates, and preserves integrity.</li>
+      <li>TLS handshakes establish secure sessions for all traffic.</li>
+      <li>Essential for privacy, finance, e-commerce, and trust online.</li>
+    </ul>
+  </section>
+   </main>
+</body>
+<footer>This is a class project for IT 3203. Course site: https://ksuweb.github.io/IT3203/</footer>
+<footer class="footer-logo"><a href = "https://www.linkedin.com/in/makebashangwe/">@makebashangwe</a></footer>
+</html>

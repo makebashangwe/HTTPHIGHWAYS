@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <title>Early HTTP</title>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><h3>Home</h3></a></li>
+        <li><a href="key-concepts.html"><h3>Key Concepts</h3></a></li>
+        <li><a href="early-http.html"><h3>Early HTTP</h3></a></li>
+        <li><a href="http2.html"><h3>HTTP/2</h3></a></li>
+        <li><a href="http3.html"><h3>HTTP/3</h3></a></li>
+        <li><a href="apis-cloud.html"><h3>APIs & Cloud</h3></a></li>
+        <li><a href="security-https.html"><h3>Security</h3></a></li>
+        <li><a href="about.html"><h3>About</h3></a></li>
+      </ul>
+      <h1 class="header-logo">HTTP</h1>
+
+    </nav>
+    <h1 class="header-title">The Evolution of Early HTTP</h1>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>HTTP: The Humble Beginning</h2>
+      <img src="assets/images/ftp.gif">
+      <p>Think of HTTP in its earliest form as a simple courier with one job: <em>“Go fetch this document.”</em></p>
+      <ul>
+        <li>Only supported one method: <strong>GET</strong></li>
+        <li>No headers, no status codes — just raw HTML</li>
+        <li>Connection closed immediately after each request</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>HTTP 1.0 – Growing Up</h2>
+      <img src="assets/images/error.gif">
+      <p>By 1996, HTTP grew a bit smarter and more useful:</p>
+      <ul>
+        <li>Introduced headers, status codes, and new methods like <strong>POST</strong> and <strong>HEAD</strong></li>
+        <li>Every request required a brand-new TCP connection (which made things slow)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>HTTP 1.1 – The Workhorse</h2>
+      <img src="assets/images/olip.gif"
+      <p>Released in 1997, this version dominated the web for decades. Key improvements included:</p>
+      <ul>
+        <li><strong>Persistent connections</strong> (no more reconnecting for every file)</li>
+        <li>Pipelining — send multiple requests at once</li>
+        <li>Chunked transfer encoding for streaming data</li>
+        <li>Enhanced caching mechanisms</li>
+        <li>Required the <strong>Host</strong> header, enabling virtual hosting</li>
+      </ul>
+      <p>Despite its upgrades, HTTP 1.1 still carried delays from older structures, setting the stage for HTTP/2 and beyond.</p>
+    </section>
+    <img class="center-img" src="assets/images/cutestar.gif">
+    <section>
+      <h2>Quick Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Year</th>
+            <th>Key Features</th>
+            <th>Limitations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.9</td>
+            <td>1991</td>
+            <td><strong>GET</strong> only; raw HTML</td>
+            <td>Closed after each request</td>
+          </tr>
+          <tr>
+            <td>1.0</td>
+            <td>1996</td>
+            <td>Headers, status codes, <strong>POST/HEAD</strong></td>
+            <td>New TCP connection for every request</td>
+          </tr>
+          <tr>
+            <td>1.1</td>
+            <td>1997</td>
+            <td>Persistent connections, pipelining, caching</td>
+            <td>Inherited delays from older designs</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+    <footer><a href="https://ksuweb.github.io/IT3203/">This is a class project for IT 3203.</a></footer>
+    <footer class="footer-logo"><a href = "https://www.linkedin.com/in/makebashangwe/">@makebashangwe</a></footer>
+</body>
+</html>
