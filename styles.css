@@ -277,3 +277,17 @@ tbody td:first-child {
   height: 300px; /* crop height */
   background: url("assets/images/Streaming\ The\ Internet\ GIF\ by\ Matthew\ Butler.gif") center/cover no-repeat;
 }
+
+/* quiz result colors */
+.ok { color: #0a7f27; font-weight: 700; }
+.bad { color: #b00020; font-weight: 700; }
+#results .card { border: 1px solid #eee; border-radius: 12px; padding: 16px; }
+#perQuestion li { margin: 4px 0; }
+
+/* quiz form polish */
+#quizForm fieldset { border: 1px solid #e6e6e6; border-radius: 12px; padding: 16px; margin: 12px 0; }
+#quizForm legend { font-weight: 700; padding: 0 6px; }
+#quizForm input[type="text"] { width: 100%; max-width: 420px; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+#quizForm label { display: inline-block; margin: 6px 0; }
+#quizForm button { padding: 10px 16px; border-radius: 10px; border: 1px solid #ddd; cursor: pointer; }
+#quizForm button:hover { background:#f7f7f7; }

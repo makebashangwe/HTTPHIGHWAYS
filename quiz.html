@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+  <title>QUIZ</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html"><h3>Home</h3></a></li>
+        <li><a href="key-concepts.html"><h3>Key Concepts</h3></a></li>
+        <li><a href="early-http.html"><h3>Early HTTP</h3></a></li>
+        <li><a href="http2.html"><h3>HTTP2</h3></a></li>
+        <li><a href="http3.html"><h3>HTTP3</h3></a></li>
+        <li><a href="apis-cloud.html"><h3>Api & Cloud</h3></a></li>
+        <li><a href="security-https.html"><h3>Security</h3></a></li>
+        <li><a href="quiz.html"><h3>Quiz</h3></a></li>
+        <li><a href="about.html"><h3>About</h3></a></li>
+      </ul>
+      <h1 class="header-logo">HTTP</h1>
+    </nav>
+    <h1 class="header-title">Quiz Time!</h1>
+  </header>
+
+  <main class="container">
+    <h2>Self-Assessment Quiz</h2>
+    <p class="center-text">Test your knowledge from the site. Submit to see instant feedback. You can retake as many times as you like.</p>
+
+    <form id="quizForm">
+      <!-- Q1: Fill in the blank -->
+      <fieldset>
+        <legend><strong>1) Fill in the blank</strong></legend>
+        <label for="q1">HTTP/3 runs over <em>_____</em> and uses UDP.</label><br>
+        <input id="q1" name="q1" type="text" placeholder="your answer" required>
+      </fieldset>
+
+      <!-- Q2: Single choice -->
+      <fieldset>
+        <legend><strong>2) Which HTTP version introduced persistent connections by default?</strong></legend>
+        <label><input type="radio" name="q2" value="http09" required> HTTP/0.9</label><br>
+        <label><input type="radio" name="q2" value="http10"> HTTP/1.0</label><br>
+        <label><input type="radio" name="q2" value="http11"> HTTP/1.1</label><br>
+        <label><input type="radio" name="q2" value="http2"> HTTP/2</label>
+      </fieldset>
+
+      <!-- Q3: Single choice -->
+      <fieldset>
+        <legend><strong>3) Which mechanism compresses headers in HTTP/2?</strong></legend>
+        <label><input type="radio" name="q3" value="gzip" required> Gzip</label><br>
+        <label><input type="radio" name="q3" value="brotli"> Brotli</label><br>
+        <label><input type="radio" name="q3" value="hpack"> HPACK</label><br>
+        <label><input type="radio" name="q3" value="deflate"> Deflate</label>
+      </fieldset>
+
+      <!-- Q4: Single choice -->
+      <fieldset>
+        <legend><strong>4) To enable HTTP/2 in browsers, sites typically use:</strong></legend>
+        <label><input type="radio" name="q4" value="tcp" required> Plain TCP without TLS</label><br>
+        <label><input type="radio" name="q4" value="tls"> HTTPS/TLS</label><br>
+        <label><input type="radio" name="q4" value="ftp"> FTP</label><br>
+        <label><input type="radio" name="q4" value="ssh"> SSH</label>
+      </fieldset>
+
+      <!-- Q5: Multi-select -->
+      <fieldset>
+        <legend><strong>5) Select all benefits QUIC/HTTP/3 brings:</strong></legend>
+        <label><input type="checkbox" name="q5" value="handshake"> Fewer handshake roundtrips</label><br>
+        <label><input type="checkbox" name="q5" value="streams"> Independent (multiplexed) streams without head-of-line blocking</label><br>
+        <label><input type="checkbox" name="q5" value="guaranteedBandwidth"> Guaranteed lower bandwidth use</label><br>
+        <label><input type="checkbox" name="q5" value="fasterRecovery"> Faster connection migration/recovery</label>
+      </fieldset>
+
+      <div style="margin-top:1rem; display:flex; gap:0.75rem; flex-wrap:wrap">
+        <button type="submit">Submit</button>
+        <button type="button" id="resetBtn">Reset</button>
+      </div>
+    </form>
+
+    <section id="results" aria-live="polite" hidden>
+      <div class="card">
+        <h3 id="summary"></h3>
+        <p id="totals"></p>
+        <ul id="perQuestion"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- load script at end -->
+<script src="quiz.js" defer></script>
+</body>
+</html>
