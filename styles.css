@@ -95,14 +95,14 @@ header nav a:hover {
 
 /* --- HEADER TITLE --- */
 .header-title {
-  font-family: 'Lostar', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: rgb(0, 0, 0);
   text-align: center;
   margin: 24px 0;
   font-size: 5rem;
 }
 .header-logo {
-  font-family: 'Lostar', sans-serif;
+  font-family: 'Lato', sans-serif;
   color: white;        /* match the nav text */
   font-size: 2.5rem;   /* tweak size to fit better */
   margin: 0;           /* remove default h1 spacing */
@@ -125,7 +125,7 @@ figure {
 figure img, 
 figure video {
   display: block;
-  max-width: 100%;
+  max-width: 20%;
   height: auto;
   margin-left: auto;   /* centers horizontally */
   margin-right: auto;  /* centers horizontally */
